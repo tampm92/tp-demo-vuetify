@@ -4,7 +4,7 @@
     	<v-container class="d-flex ma-auto py-0">
 			<v-layout class="flex-md-nowrap align-center">
 				<v-img src="../../assets/tp-100.png" max-height="50" max-width="50" width="50" aspect-ratio="1" class="logo"></v-img>
-				<v-toolbar-title class ="align-self-center pa-0 hidden-xs-only" src="/">TP Vuex - Vuetify</v-toolbar-title>
+				<v-toolbar-title class ="align-self-center pa-0 hidden-xs-only" src="/">TP Demo</v-toolbar-title>
 				<v-toolbar-items class="ml-5 align-center menu">
 					<v-btn v-for="menu in menus" :key="menu.name" :href="menu.link" dark text color="white" 
 						class="ml-0 hidden-sm-and-down menu-item" 
@@ -54,7 +54,7 @@
 <script>
 export default {
 	data: () => ({
-		gitHub: "https://github.com/tampm92/tp-awesome/tree/master/vuejs/vue-cli",
+		gitHub: "https://github.com/tampm92/tp-demo-vuetify",
 		group: null,
 		drawer: false,
 		menus: [{

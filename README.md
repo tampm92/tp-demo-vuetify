@@ -1,7 +1,13 @@
-# tp-demo-vuetify
+# TP-Demo Vuetify
 
-> Use [theme](https://free-blog.vuetifyjs.com/)
-> More [themes](https://vuetifyjs.com/vi-VN/themes/premium)
+> Demo [here](https://tp-demo-vuetify.netlify.com)
+
+## Referents
+
+- [Vuetify](https://vuetifyjs.com/)
+- [Vue CLI](https://cli.vuejs.org/)
+- [Vuex](https://vuex.vuejs.org/guide/)
+- [Axios](https://github.com/axios/axios)
 
 ## Project setup
 
