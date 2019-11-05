@@ -21,7 +21,7 @@ export default {
   }),
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 #default-layout{
   max-width: 100vw;
   max-height: 100vh;
@@ -31,8 +31,9 @@ export default {
   position: relative;
   & > header {
     max-height: 64px;
-    & > div.v-toolbar__content {
-      max-height: 100%;
+    div.v-toolbar__content {
+      max-height: 100% !important;
+      align-items: center;
     }
   }
   & > div.container {

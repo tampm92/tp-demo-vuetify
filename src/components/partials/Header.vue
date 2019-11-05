@@ -1,17 +1,33 @@
 <template>
   	<v-app-bar fixed color="teal" dense dark prominent max-height="64">
+		<v-app-bar-nav-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     	<v-container class="d-flex ma-auto py-0">
-      		<v-app-bar-nav-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-			<v-btn icon to="/">
-          		<v-img src="../../assets/tp-100.png" max-height="50" max-width="50" width="50" aspect-ratio="1" class="logo"></v-img>
-			</v-btn>
-        	<v-toolbar-title src="/">TP Vuex - Vuetify</v-toolbar-title>
-
-        	<v-spacer></v-spacer>
-
-			<v-btn icon :href="gitHub" target="black">
-				<v-icon>fab fa-github</v-icon>
-			</v-btn>
+			<v-layout class="flex-md-nowrap align-center">
+				<v-img src="../../assets/tp-100.png" max-height="50" max-width="50" width="50" aspect-ratio="1" class="logo"></v-img>
+				<v-toolbar-title class ="align-self-center pa-0" src="/">TP Vuex - Vuetify</v-toolbar-title>
+				<v-toolbar-items class="ml-5 align-center menu">
+					<v-btn v-for="menu in menus" :key="menu.name" :href="menu.link" color="teal" class="ml-0 hidden-sm-and-down v-btn--active v-btn v-btn--flat v-btn--router theme--light menu-item">{{menu.name}}</v-btn>
+				</v-toolbar-items>
+				<v-spacer></v-spacer>
+				<v-text-field
+					hide-details
+					label=""
+					single-line
+					solo
+					solo-inverted
+					solo-flat
+					dense
+					max-width="100"
+					append-icon="fa fa-search"
+					dark
+					color="teal"
+					v-model="valueSearch"
+				>
+				</v-text-field>
+				<v-btn icon :href="gitHub" target="black">
+					<v-icon>fab fa-github</v-icon>
+				</v-btn>
+			</v-layout>
     	</v-container>
 		<v-navigation-drawer
 			color="teal"
@@ -37,10 +53,12 @@ export default {
 		gitHub: "https://github.com/tampm92/tp-awesome/tree/master/vuejs/vue-cli",
 		group: null,
 		drawer: false,
-		menu: [{
+		menus: [{
 			name: 'Home',
-			link: "/"
-		}]
+			link: "/",
+			active: true
+		}],
+		valueSearch: ''
 	}),
 	watch: {
 		group() {
@@ -56,6 +74,9 @@ header{
 		align-items: center;
 		&.container {
 			max-height: 100%;
+			& > div{
+				max-height: 100%;
+			}
 		}
 	}
 	.logo {
@@ -65,6 +86,11 @@ header{
 		height: 100vh !important;
 		max-height: 100vh;
 		overflow-y: auto;
+	}
+	.menu{
+		.menu-item{
+			height: 36px !important;
+		}
 	}
 }
 </style>

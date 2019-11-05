@@ -2,11 +2,9 @@
   <footer class="theme--dark" color="black">
     <v-container class="d-flex">
       <v-layout class="wrap">
-        <div class="flex xs9">
-          <div>
-            <v-icon>mdi-email-outline</v-icon>
+        <div class="flex align-center xs9">
+            <v-icon dark>fa fa-envelope</v-icon>
             <span>EMAIL: tamphanmin1992@gmail.com</span>
-          </div>
         </div>
       </v-layout>
     </v-container>
@@ -22,7 +20,7 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-  background: #f5f5f5;
+  background: rgba(203, 170, 92, .2);
   color: black;
   .container{
     height: 100%;
