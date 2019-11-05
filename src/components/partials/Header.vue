@@ -63,7 +63,7 @@ export default {
 			active: false
 		}, {
 			name: 'About',
-			link: "/#",
+			link: "/#/about",
 			active: false
 		}, {
 			name: 'Projects',

@@ -3,8 +3,8 @@
     <v-container class="d-flex">
       <v-layout class="wrap">
         <div class="flex align-center xs9">
-            <v-icon dark>fa fa-envelope</v-icon>
-            <span>EMAIL: tamphanmin1992@gmail.com</span>
+            <v-icon light>fa fa-envelope</v-icon>
+            <span class="ml-2">EMAIL: tamphanmin1992@gmail.com</span>
         </div>
       </v-layout>
     </v-container>

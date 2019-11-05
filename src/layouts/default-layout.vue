@@ -1,7 +1,7 @@
 <template>
   <div id="default-layout">
     <Header/>
-    <v-container>
+    <v-container class="flex-grow-1">
     <slot />
     </v-container>
     <Footer/>
@@ -25,6 +25,8 @@ export default {
 #default-layout{
   max-width: 100vw;
   max-height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   overflow: auto;
   display: flex;
   flex-flow: column nowrap;
