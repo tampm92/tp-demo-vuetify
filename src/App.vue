@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="overflow-hidden">
     <component :is="layoutName">
       <router-view></router-view>
     </component>
