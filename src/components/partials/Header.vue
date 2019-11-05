@@ -4,9 +4,13 @@
     	<v-container class="d-flex ma-auto py-0">
 			<v-layout class="flex-md-nowrap align-center">
 				<v-img src="../../assets/tp-100.png" max-height="50" max-width="50" width="50" aspect-ratio="1" class="logo"></v-img>
-				<v-toolbar-title class ="align-self-center pa-0" src="/">TP Vuex - Vuetify</v-toolbar-title>
+				<v-toolbar-title class ="align-self-center pa-0 hidden-xs-only" src="/">TP Vuex - Vuetify</v-toolbar-title>
 				<v-toolbar-items class="ml-5 align-center menu">
-					<v-btn v-for="menu in menus" :key="menu.name" :href="menu.link" color="teal" class="ml-0 hidden-sm-and-down v-btn--active v-btn v-btn--flat v-btn--router theme--light menu-item">{{menu.name}}</v-btn>
+					<v-btn v-for="menu in menus" :key="menu.name" :href="menu.link" dark text color="white" 
+						class="ml-0 hidden-sm-and-down menu-item" 
+						:class="menu.active ? 'v-btn--active' : ''">
+						{{menu.name}}
+					</v-btn>
 				</v-toolbar-items>
 				<v-spacer></v-spacer>
 				<v-text-field
@@ -56,6 +60,18 @@ export default {
 		menus: [{
 			name: 'Home',
 			link: "/",
+			active: false
+		}, {
+			name: 'About',
+			link: "/#",
+			active: false
+		}, {
+			name: 'Projects',
+			link: "/#",
+			active: false
+		}, {
+			name: 'Members',
+			link: "#",
 			active: true
 		}],
 		valueSearch: ''
@@ -90,6 +106,7 @@ header{
 	.menu{
 		.menu-item{
 			height: 36px !important;
+			background: transparent !important;
 		}
 	}
 }

@@ -12,7 +12,7 @@
         :flat="true"
         :avatar="true"
       >
-        <v-subheader>Users</v-subheader>
+        <v-subheader>Members</v-subheader>
         <v-list-item-group color="primary">
           <v-list-item
             v-for="(user, i) in users"
