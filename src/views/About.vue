@@ -1,7 +1,13 @@
 <template>
-  <layout name="clean-layout">
-    <div id="about-page">
-      <h1>This is an about page</h1>
-    </div>
+  	<layout name="default-layout">
+		<div id="about-page">
+      		<v-card class="mx-auto" outlined="">
+				<v-list-item three-line shaped flat avatar>
+					<v-list-item-content>
+						<v-list-item-title class="headline mb-1">About</v-list-item-title>
+					</v-list-item-content>
+				</v-list-item>
+			</v-card>
+		</div>
   </layout>
 </template>

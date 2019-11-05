@@ -1,7 +1,9 @@
 <template>
   <div id="default-layout">
     <Header/>
+    <v-container class="flex-grow-1">
     <slot />
+    </v-container>
     <Footer/>
   </div>
 </template>
@@ -19,3 +21,30 @@ export default {
   }),
 };
 </script>
+<style lang="scss">
+#default-layout{
+  max-width: 100vw;
+  max-height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  & > header {
+    max-height: 64px;
+    div.v-toolbar__content {
+      max-height: 100% !important;
+      align-items: center;
+    }
+  }
+  & > div.container {
+    margin-top: 64px;
+  }
+  & > footer {
+    height: 64px;
+    max-height: 64px;
+    min-height: 64px;
+  }
+}
+</style>

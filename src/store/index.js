@@ -45,9 +45,9 @@ export default new Vuex.Store({
       context.commit({
         type: 'STOP_LOADING'
       });
-      return data.data;
+      return data;
     },
-    async getUserDetal(context, actionData) {
+    async getUserDetail(context, actionData) {
       context.commit({
         type: 'START_LOADING'
       });
